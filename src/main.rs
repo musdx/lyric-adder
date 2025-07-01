@@ -33,8 +33,6 @@ fn main() {
         };
         let artist = tag.artist().unwrap();
         let title = tag.title().unwrap();
-        let title = title.to_string().replace(" ", "+");
-        let artist = artist.to_string().replace(" ", "+");
         let artist: String = form_urlencoded::byte_serialize(artist.as_bytes()).collect();
         let title: String = form_urlencoded::byte_serialize(title.as_bytes()).collect();
         println!("{title}\n{artist}");
